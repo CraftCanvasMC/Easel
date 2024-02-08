@@ -1,6 +1,8 @@
 [Purpur]: https://purpurmc.org
 
-## Tentacles
-Template to create a mantainable fork of [Purpur].
+## Easel
 
-This readme will eventually contain instructions regarding the patch system. For now, visit Purpur's [CONTRIBUTING.md](https://github.com/PurpurMC/Purpur/blob/HEAD/CONTRIBUTING.md).
+Template to create a mantainable fork of Canvas.
+
+This readme will eventually contain instructions regarding the patch system. For now, visit
+Canvas's [CONTRIBUTING.md](https://github.com/CraftCanvasMC/Canvasblob/HEAD/CONTRIBUTING.md).

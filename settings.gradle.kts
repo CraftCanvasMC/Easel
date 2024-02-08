@@ -20,16 +20,16 @@ if (!file(".git").exists()) {
          In order to build Tentacles from source you must clone
          the repository using Git, not download a code zip from GitHub.
          
-         See https://github.com/PurpurMC/Purpur/blob/HEAD/CONTRIBUTING.md
-         for further information on building and modifying Purpur.
+         See https://github.com/CraftCanvasMC/Canvas/blob/HEAD/CONTRIBUTING.md
+         for further information on building and modifying Canvas.
         ===================================================
     """.trimIndent()
     error(errorText)
 }
 
-rootProject.name = "tentacles"
+rootProject.name = "easel"
 
-for (name in listOf("Tentacles-API", "Tentacles-Server", "paper-api-generator")) {
+for (name in listOf("Easel-API", "Easel-Server", "paper-api-generator")) {
     val projName = name.lowercase(Locale.ENGLISH)
     include(projName)
     findProject(":$projName")!!.projectDir = file(name)

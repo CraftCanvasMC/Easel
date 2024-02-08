@@ -4,7 +4,7 @@ import org.gradle.api.tasks.testing.logging.TestLogEvent
 plugins {
     java
     `maven-publish`
-    id("com.github.johnrengelman.shadow") version "8.1.1" apply false
+    id("com.github.johnrengelman.shadow") version "7.1.2" apply false
     id("io.papermc.paperweight.patcher") version "1.5.11"
 }
 
@@ -63,23 +63,23 @@ dependencies {
 }
 
 paperweight {
-    serverProject = project(":tentacles-server")
+    serverProject = project(":easel-server")
 
     remapRepo = paperMavenPublicUrl
     decompileRepo = paperMavenPublicUrl
 
-    useStandardUpstream("purpur") {
-        url = github("PurpurMC", "Purpur")
-        ref = providers.gradleProperty("purpurCommit")
+    useStandardUpstream("canvas") {
+        url = github("CraftCanvasMC", "Canvas")
+        ref = providers.gradleProperty("canvasCommit")
 
         withStandardPatcher {
-            baseName("Purpur")
+            baseName("Canvas")
 
             apiPatchDir = layout.projectDirectory.dir("patches/api")
-            apiOutputDir = layout.projectDirectory.dir("Tentacles-API")
+            apiOutputDir = layout.projectDirectory.dir("Easel-API")
 
             serverPatchDir = layout.projectDirectory.dir("patches/server")
-            serverOutputDir = layout.projectDirectory.dir("Tentacles-Server")
+            serverOutputDir = layout.projectDirectory.dir("Easel-Server")
         }
 
         patchTasks.register("generatedApi") {
@@ -92,7 +92,7 @@ paperweight {
 }
 
 tasks.generateDevelopmentBundle {
-    apiCoordinates = "org.purpurmc.tentacles:tentacles-api"
+    apiCoordinates = "io.github.dueris:easel-api"
     mojangApiCoordinates = "io.papermc.paper:paper-mojangapi"
     libraryRepositories.set(
         listOf(
@@ -107,7 +107,7 @@ allprojects {
     publishing {
         repositories {
             maven("https://repo.purpurmc.org/snapshots") {
-                name = "tentacles"
+                name = "easel"
                 credentials(PasswordCredentials::class)
             }
         }
