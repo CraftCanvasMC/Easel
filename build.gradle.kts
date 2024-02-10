@@ -104,14 +104,14 @@ tasks.generateDevelopmentBundle {
 }
 
 allprojects {
-    publishing {
-        repositories {
-            maven("https://repo.purpurmc.org/snapshots") {
-                name = "easel"
-                credentials(PasswordCredentials::class)
-            }
-        }
-    }
+//    publishing {
+//        repositories {
+//            maven("https://repo.purpurmc.org/snapshots") {
+//                name = "easel"
+//                credentials(PasswordCredentials::class)
+//            }
+//        }
+//    }
 }
 
 publishing {
