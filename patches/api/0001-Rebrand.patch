@@ -1,0 +1,25 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: PurpleWolfMC <jedimastertoothless@hotmail.com>
+Date: Sun, 11 Feb 2024 12:48:54 -0800
+Subject: [PATCH] Rebrand
+
+
+diff --git a/build.gradle.kts b/build.gradle.kts
+index 637d7db5079e05980532e27ae0893e7ec1437d12..b3226f142faa81b378c2e001077e7a420c06e5ec 100644
+--- a/build.gradle.kts
++++ b/build.gradle.kts
+@@ -273,7 +273,7 @@ tasks.check {
+ // Paper end -/- Canvas start
+ tasks.getByName("jar").dependsOn("sourcesJar")
+ 
+-publishing {
++/* publishing { // Easel
+     publications {
+         create<MavenPublication>("mavenJava") {
+             pom {
+@@ -311,4 +311,4 @@ publishing {
+         }
+     }
+ }
+-// Canvas end
++*/ // Canvas end // Easel
